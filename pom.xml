@@ -4,7 +4,7 @@
   <groupId>work.yk0</groupId>
   <artifactId>gh-test</artifactId>
   <packaging>jar</packaging>
-  <version>3.0</version>
+  <version>4.0</version>
   <name>gh-test</name>
   <url>http://maven.apache.org</url>
   <build>

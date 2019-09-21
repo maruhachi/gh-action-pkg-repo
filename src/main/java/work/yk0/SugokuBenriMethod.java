@@ -1,14 +1,14 @@
 package work.yk0;
 
 /**
- * Hello world!
- *
+ * This is Sugoku Benri.
+ * @author ykonno
  */
 public class SugokuBenriMethod
 {
     public static void main( String[] args )
     {
-        System.out.println( "version 3.0!" );
+        System.out.println( "version 4.0!" );
     }
 
     /**

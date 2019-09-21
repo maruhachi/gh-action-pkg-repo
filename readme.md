@@ -1,5 +1,6 @@
-# gh-action-pkg-repo
-** GitHubでActionとPackageRegistryを試してみるリポジトリ
+# GitHubでActionとPackageRegistryを試してみるリポジトリ
+
+* 基本的な流れ - [Github help](https://help.github.com/ja/articles/configuring-apache-maven-for-use-with-github-package-registry)
 
 ### Memo
 1. ベースとなるプロジェクトの生成
@@ -58,3 +59,8 @@ Uploaded to github: https://maven.pkg.github.com/maruhachi/gh-action-pkg-repo/wo
 [INFO] Finished at: 2019-09-21T12:15:57+09:00
 [INFO] Final Memory: 15M/54M
 [INFO] ------------------------------------------------------------------------```
+```
+### reference site
+* mavn-settings.xml - [password encryption](http://maven.apache.org/guides/mini/guide-encryption.html)
+  * master password を.m2に生成しておく必要があるみたい
+  
