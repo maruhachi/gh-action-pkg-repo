@@ -8,7 +8,7 @@ public class SugokuBenriMethod
 {
     public static void main( String[] args )
     {
-        System.out.println( "version 4.0!" );
+        System.out.println( "version 5.0!" );
     }
 
     /**
