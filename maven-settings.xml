@@ -34,7 +34,8 @@
     <server>
       <id>github</id>
       <username>maruhachi</username>
-      <password>{kvZ9YZdnxiQHYP+wGElF3LBDOcip74M2qB1HHAG42swqT1YQ7AZhz1yyEK3pXwnKpdUr8NFE+y5Aep/ao1q18A==}</password>
+      <password>${server.pass}</password>
+<!--      <password>{kvZ9YZdnxiQHYP+wGElF3LBDOcip74M2qB1HHAG42swqT1YQ7AZhz1yyEK3pXwnKpdUr8NFE+y5Aep/ao1q18A==}</password>-->
     </server>
   </servers>
 </settings>
