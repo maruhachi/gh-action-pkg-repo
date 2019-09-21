@@ -4,7 +4,7 @@
   <groupId>work.yk0</groupId>
   <artifactId>gh-test</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>3.0</version>
   <name>gh-test</name>
   <url>http://maven.apache.org</url>
   <build>
@@ -25,4 +25,12 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>11</java.version>
   </properties>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub OWNER Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/maruhachi/gh-action-pkg-repo</url>
+    </repository>
+  </distributionManagement>
 </project>

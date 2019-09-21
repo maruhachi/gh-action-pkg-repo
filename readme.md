@@ -2,7 +2,7 @@
 ** GitHubでActionとPackageRegistryを試してみるリポジトリ
 
 ### Memo
-* ベースとなるプロジェクトの生成
+1. ベースとなるプロジェクトの生成
 ```console
 $ mvn archetype:generate  -DarchetypeArtifactId=maven-archetype-quickstart
 〜〜
@@ -19,7 +19,7 @@ package: work.yk0.gh-test
  Y: : 
 ```
 
-* ビルドが通るようにpom.xmlを修正
+2. ビルドが通るようにpom.xmlを修正
 ```xml
 このあたりを足す
     <plugins>
@@ -31,3 +31,30 @@ package: work.yk0.gh-test
           <source>11</source>
           <target>11</target>
 ```
+
+3. GithubのRegistryへdeploy
+```console
+$ mvn clean deploy -s ./maven-settings.xml -DskipTests
+[INFO] Scanning for projects...
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building gh-test 2.0
+[INFO] ------------------------------------------------------------------------
+〜〜
+
+[INFO]
+[INFO] --- maven-deploy-plugin:2.7:deploy (default-deploy) @ gh-test ---
+Uploading to github: https://maven.pkg.github.com/maruhachi/gh-action-pkg-repo/work/yk0/gh-test/2.0/gh-test-2.0.jar
+Uploaded to github: https://maven.pkg.github.com/maruhachi/gh-action-pkg-repo/work/yk0/gh-test/2.0/gh-test-2.0.jar (2.6 kB at 1.5 kB/s)
+Uploading to github: https://maven.pkg.github.com/maruhachi/gh-action-pkg-repo/work/yk0/gh-test/2.0/gh-test-2.0.pom
+Uploaded to github: https://maven.pkg.github.com/maruhachi/gh-action-pkg-repo/work/yk0/gh-test/2.0/gh-test-2.0.pom (1.4 kB at 1.1 kB/s)
+Downloading from github: https://maven.pkg.github.com/maruhachi/gh-action-pkg-repo/work/yk0/gh-test/maven-metadata.xml
+Uploading to github: https://maven.pkg.github.com/maruhachi/gh-action-pkg-repo/work/yk0/gh-test/maven-metadata.xml
+Uploaded to github: https://maven.pkg.github.com/maruhachi/gh-action-pkg-repo/work/yk0/gh-test/maven-metadata.xml (291 B at 431 B/s)
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 7.545 s
+[INFO] Finished at: 2019-09-21T12:15:57+09:00
+[INFO] Final Memory: 15M/54M
+[INFO] ------------------------------------------------------------------------```
